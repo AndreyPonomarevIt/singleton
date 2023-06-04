@@ -24,10 +24,11 @@ public class WebSiteTest {
 
     @Test
     public void testWebSite() {
-        List<String> expectList = new ArrayList<>(Arrays.asList("Автомобильные шины", "Моторные масла", "Велосипеды", "Мангалы, грили, барбекю", "Палатки", "Спальные мешки",
-                "Мобильные телефоны", "Массажеры и массажные кресла", "Пылесосы"));
-        String items = "project-navigation__list project-navigation__list_secondary";
+        List<String> expectList = new ArrayList<>(Arrays.asList("Все суперцены\nКаталог",
+                "Новости", "Автобарахолка", "Дома и квартиры", "Найдите мастера\nУслуги", "Барахолка", "Форум"));
+        String items = "b-main-navigation__item";
         List<WebElement> element = driver.findElements(By.className(items));
+        System.out.println(element.size());
         List<String> actualItems = new ArrayList<>();
         for(WebElement list :element) {
             actualItems.add(list.getText());
