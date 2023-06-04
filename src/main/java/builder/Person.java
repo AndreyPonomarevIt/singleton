@@ -14,10 +14,11 @@ public class Person {
     }
 
     public String getName() {
-        return getName();
+        return name;
     }
 
     public String getAccount() {
+
         return getAccount();
     }
 
